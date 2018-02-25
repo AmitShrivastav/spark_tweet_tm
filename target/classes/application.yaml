@@ -1,0 +1,37 @@
+ # All settings required for running the app locally should go here
+ # For local testing the cloud config should be disabled in bootstrap.yml
+ # to eliminate the dependency on an external system.
+
+
+#Application settings
+dcp.api.version: ${api.version}.${api.revision}
+
+server:
+  port: 8881
+  ssl:
+    enabled: false
+  contextPath: /
+
+spring:
+  application:
+    name: tmobiletweet
+  http:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+#JMS Broker URLs
+activemq.broker.url: ""
+tibco.ems.url: ""
+
+#Camel Endpoints
+camel.springboot.name: tmobiletweet
+
+#Elasticsearch 
+twitter:
+  consumerKey: Rt2h9BWFlfVOiGSKoMQUfkwJx
+  consumerSecret: inb9MVgLiKceVH8hoey5NQQsvB4ccfBeerBhcfugrY5ofHJAPq
+  accessToken: 441117375-hkXOUU5Hsay8cdUv4Z5uuN0Ck4nKnOiRmfsKaxAq
+  accessTokenSecret: kDLsGX1QJ3bcVK0dKLKvxaZC5JfTxgKc8UvDJF3D7cnEj
+
+
